@@ -1,1 +1,9 @@
 Aperobot/Build
+Aperobot/DerivedData
+xcuserdata/
+
+.DS_Store
+
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
