@@ -14,7 +14,22 @@ class ViewController: UICollectionViewController {
     let cart: Cart = Cart()
 
     @IBAction func addItem(_ sender: UIButton) {
-        cart.add(item: products[sender.tag])
+        let product = products[sender.tag]
+        cart.add(product)
+        
+//        let indexPath = IndexPath(item: sender.tag, section: 0)
+//        if let cell = collectionView!.cellForItem(at: indexPath) as? ProductCell {
+//            cell.updateCounter(cart.getCount(for: product))
+//            collectionView!.reloadData()
+//        }
+        
+        updateOrderCount()
+    }
+    
+    @IBAction func rmvItem(_ sender: UIButton) {
+        let product = products[sender.tag]
+        cart.remove(product)
+        updateOrderCount()
     }
     
     override func viewDidLoad() {
@@ -24,18 +39,38 @@ class ViewController: UICollectionViewController {
     }
     
     func setNavBar() {
+        
+        // Change the font and size of nav bar text
         let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetOrder))
-        refreshButton.tintColor = UIColor.black
         navigationItem.leftBarButtonItem = refreshButton
+        let cartButton = UIBarButtonItem(title: "Cart: " + String(cart.getFullCount()), style: .plain, target: self, action: #selector(showCart))
+        
+        navigationItem.rightBarButtonItem = cartButton
+    }
+    
+    func setToolbar() {
+        navigationController?.setToolbarHidden(false, animated: true)
+        let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetOrder))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cartButton = UIBarButtonItem(title: String(cart.getFullCount()), style: .plain, target: self, action: #selector(showCart))
+        setToolbarItems([refreshButton, flexibleSpace, cartButton], animated: true)
+    }
+    
+    func showCart() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Cart") as? CartViewController {
+            vc.cart = self.cart
+            vc.products = self.products
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func populateProducts() {
-        let product1 = Product(name: "Orval", image: "beer")
-        let product2 = Product(name: "Vin blanc", image: "whitewine")
-        let product3 = Product(name: "Vin rosé", image: "rosewine")
-        let product4 = Product(name: "Vin rouge", image: "redwine")
-        let product5 = Product(name: "Burger", image: "hamburger")
-        let product6 = Product(name: "Assiette fromage", image: "snack")
+        let product1 = Product(name: "Orval", image: "beer", sellingPrice: 4.5, price: 3.03)
+        let product2 = Product(name: "Vin blanc", image: "whitewine", sellingPrice: 2.5, price: 1.5)
+        let product3 = Product(name: "Vin rosé", image: "rosewine", sellingPrice: 2.5, price: 1.5)
+        let product4 = Product(name: "Vin rouge", image: "redwine", sellingPrice: 2.5, price: 1.5)
+        let product5 = Product(name: "Burger", image: "hamburger", sellingPrice: 3.5, price: 2.0)
+        let product6 = Product(name: "Assiette fromage", image: "snack", sellingPrice: 4.5, price: 3.0)
         products.append(product1)
         products.append(product2)
         products.append(product3)
@@ -45,8 +80,17 @@ class ViewController: UICollectionViewController {
         collectionView?.reloadData()
     }
     
+    func updateOrderCount() {
+        if var items = toolbarItems {
+            items[2].title = "Cart: " + String(cart.getFullCount())
+            setToolbarItems(items, animated: true)
+        }
+         navigationItem.rightBarButtonItem?.title = "Cart: " + String(cart.getFullCount())
+    }
+    
     func resetOrder() {
         cart.reset()
+        updateOrderCount()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

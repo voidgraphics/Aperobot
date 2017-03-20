@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8553497B1E789251008CCEB0 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8553497A1E789251008CCEB0 /* Cart.swift */; };
+		85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85864D2A1E80618900735E22 /* CartTableViewCell.swift */; };
+		85DDD8C31E7DA2BE0064E6B3 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */; };
 		85FB7A5D1E781F0F0023BF09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FB7A5C1E781F0F0023BF09 /* AppDelegate.swift */; };
 		85FB7A5F1E781F0F0023BF09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FB7A5E1E781F0F0023BF09 /* ViewController.swift */; };
 		85FB7A621E781F0F0023BF09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FB7A601E781F0F0023BF09 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		8553497A1E789251008CCEB0 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		855F978A1E7846F600B354E1 /* PocketSVG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PocketSVG.xcodeproj; path = "../../../../Downloads/PocketSVG-master/PocketSVG.xcodeproj"; sourceTree = "<group>"; };
+		85864D2A1E80618900735E22 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		85FB7A591E781F0F0023BF09 /* Aperobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aperobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FB7A5C1E781F0F0023BF09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85FB7A5E1E781F0F0023BF09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 				8553497A1E789251008CCEB0 /* Cart.swift */,
 				85FB7A721E782B960023BF09 /* Product.swift */,
 				85FB7A601E781F0F0023BF09 /* Main.storyboard */,
+				85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */,
+				85864D2A1E80618900735E22 /* CartTableViewCell.swift */,
 				85FB7A631E781F0F0023BF09 /* Assets.xcassets */,
 				85FB7A651E781F0F0023BF09 /* LaunchScreen.storyboard */,
 				85FB7A681E781F0F0023BF09 /* Info.plist */,
@@ -197,10 +203,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */,
 				85FB7A711E7825CA0023BF09 /* ProductCell.swift in Sources */,
 				85FB7A731E782B960023BF09 /* Product.swift in Sources */,
 				8553497B1E789251008CCEB0 /* Cart.swift in Sources */,
 				85FB7A5F1E781F0F0023BF09 /* ViewController.swift in Sources */,
+				85DDD8C31E7DA2BE0064E6B3 /* CartViewController.swift in Sources */,
 				85FB7A5D1E781F0F0023BF09 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

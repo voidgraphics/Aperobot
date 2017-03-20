@@ -13,6 +13,7 @@ class ProductCell: UICollectionViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var rmvBtn: UIButton!
+    @IBOutlet weak var counter: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,6 +28,7 @@ class ProductCell: UICollectionViewCell {
     func populate(_ product: Product, _ row: Int) {
         setText(product.name)
         addBtn.tag = row
+        rmvBtn.tag = row
         drawImage(product.image)
     }
     
@@ -38,6 +40,13 @@ class ProductCell: UICollectionViewCell {
         if let image = UIImage(named: name){
             self.imageView.image = image
         }
+    }
+    
+    func updateCounter(_ count: Int) {
+        print(name.text! + " " + counter.text!)
+        counter.text = String(count)
+        counter.isHidden = count == 0
+        print(name.text! + " " + counter.text!)
     }
     
     func drawShadow() {
