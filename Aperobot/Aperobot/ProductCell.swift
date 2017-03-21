@@ -43,10 +43,8 @@ class ProductCell: UICollectionViewCell {
     }
     
     func updateCounter(_ count: Int) {
-        print(name.text! + " " + counter.text!)
-        counter.text = String(count)
-        counter.isHidden = count == 0
-        print(name.text! + " " + counter.text!)
+        self.counter.text = String(count)
+        self.counter.isHidden = count == 0
     }
     
     func drawShadow() {

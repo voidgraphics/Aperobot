@@ -17,11 +17,12 @@ class ViewController: UICollectionViewController {
         let product = products[sender.tag]
         cart.add(product)
         
-//        let indexPath = IndexPath(item: sender.tag, section: 0)
-//        if let cell = collectionView!.cellForItem(at: indexPath) as? ProductCell {
-//            cell.updateCounter(cart.getCount(for: product))
-//            collectionView!.reloadData()
-//        }
+        let indexPath = IndexPath(item: sender.tag, section: 0)
+        if let cell = collectionView!.cellForItem(at: indexPath) as? ProductCell {
+            print(cell.name.text)
+            cell.updateCounter(cart.getCount(for: product))
+            collectionView!.reloadData()
+        }
         
         updateOrderCount()
     }
@@ -39,12 +40,9 @@ class ViewController: UICollectionViewController {
     }
     
     func setNavBar() {
-        
-        // Change the font and size of nav bar text
         let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetOrder))
         navigationItem.leftBarButtonItem = refreshButton
         let cartButton = UIBarButtonItem(title: "Cart: " + String(cart.getFullCount()), style: .plain, target: self, action: #selector(showCart))
-        
         navigationItem.rightBarButtonItem = cartButton
     }
     
@@ -90,6 +88,9 @@ class ViewController: UICollectionViewController {
     
     func resetOrder() {
         cart.reset()
+        for cell in collectionView!.visibleCells as! [ProductCell] {
+            cell.updateCounter(0)
+        }
         updateOrderCount()
     }
     
