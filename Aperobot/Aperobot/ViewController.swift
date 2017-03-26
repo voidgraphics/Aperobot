@@ -16,20 +16,14 @@ class ViewController: UICollectionViewController {
     @IBAction func addItem(_ sender: UIButton) {
         let product = products[sender.tag]
         cart.add(product)
-        
-        let indexPath = IndexPath(item: sender.tag, section: 0)
-        if let cell = collectionView!.cellForItem(at: indexPath) as? ProductCell {
-            print(cell.name.text)
-            cell.updateCounter(cart.getCount(for: product))
-            collectionView!.reloadData()
-        }
-        
+        updateItemCount(tag: sender.tag, product: product)
         updateOrderCount()
     }
     
     @IBAction func rmvItem(_ sender: UIButton) {
         let product = products[sender.tag]
         cart.remove(product)
+        updateItemCount(tag: sender.tag, product: product)
         updateOrderCount()
     }
     
@@ -76,6 +70,13 @@ class ViewController: UICollectionViewController {
         products.append(product5)
         products.append(product6)
         collectionView?.reloadData()
+    }
+    
+    func updateItemCount(tag: Int, product: Product) {
+        let indexPath = IndexPath(item: tag, section: 0)
+        if let cell = collectionView!.cellForItem(at: indexPath) as? ProductCell {
+            cell.updateCounter(cart.getCount(for: product))
+        }
     }
     
     func updateOrderCount() {
