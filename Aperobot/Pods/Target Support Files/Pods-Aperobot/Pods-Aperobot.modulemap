@@ -1,0 +1,6 @@
+framework module Pods_Aperobot {
+  umbrella header "Pods-Aperobot-umbrella.h"
+
+  export *
+  module * { export * }
+}

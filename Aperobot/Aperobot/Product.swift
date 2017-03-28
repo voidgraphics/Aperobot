@@ -11,13 +11,13 @@ import UIKit
 class Product: NSObject {
     var name: String
     var image: String
-    var sellingPrice: Float
+    var salePrice: Float
     var price: Float
     
-    init(name: String, image: String, sellingPrice: Float, price: Float) {
+    init(name: String, image: String, salePrice: Float, price: Float) {
         self.name = name
         self.image = image
-        self.sellingPrice = sellingPrice
+        self.salePrice = salePrice
         self.price = price
     }
 }

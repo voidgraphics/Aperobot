@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51EC83EE9606C70E1F3B0BA7 /* Pods_Aperobot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F849C10CCDD5B08A91FB2F56 /* Pods_Aperobot.framework */; };
 		8553497B1E789251008CCEB0 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8553497A1E789251008CCEB0 /* Cart.swift */; };
+		858285EF1E88892E0016C9DB /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858285EE1E88892E0016C9DB /* Server.swift */; };
 		85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85864D2A1E80618900735E22 /* CartTableViewCell.swift */; };
 		85DDD8C31E7DA2BE0064E6B3 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */; };
 		85FB7A5D1E781F0F0023BF09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FB7A5C1E781F0F0023BF09 /* AppDelegate.swift */; };
@@ -19,26 +21,10 @@
 		85FB7A731E782B960023BF09 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FB7A721E782B960023BF09 /* Product.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		855F978F1E7846F600B354E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 855F978A1E7846F600B354E1 /* PocketSVG.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C79800BB1A21CB5300380860;
-			remoteInfo = "PocketSVG (iOS)";
-		};
-		855F97911E7846F600B354E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 855F978A1E7846F600B354E1 /* PocketSVG.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C79800F51A21CDFD00380860;
-			remoteInfo = "PocketSVG (Mac)";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		0AFC6B10CD3655E7594CB207 /* Pods-Aperobot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aperobot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aperobot/Pods-Aperobot.debug.xcconfig"; sourceTree = "<group>"; };
 		8553497A1E789251008CCEB0 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
-		855F978A1E7846F600B354E1 /* PocketSVG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PocketSVG.xcodeproj; path = "../../../../Downloads/PocketSVG-master/PocketSVG.xcodeproj"; sourceTree = "<group>"; };
+		858285EE1E88892E0016C9DB /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		85864D2A1E80618900735E22 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		85FB7A591E781F0F0023BF09 /* Aperobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aperobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +36,8 @@
 		85FB7A681E781F0F0023BF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85FB7A701E7825CA0023BF09 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		85FB7A721E782B960023BF09 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		BFB22E3FCDD1274DFCC4D613 /* Pods-Aperobot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aperobot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aperobot/Pods-Aperobot.release.xcconfig"; sourceTree = "<group>"; };
+		F849C10CCDD5B08A91FB2F56 /* Pods_Aperobot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aperobot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,19 +45,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51EC83EE9606C70E1F3B0BA7 /* Pods_Aperobot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		855F978B1E7846F600B354E1 /* Products */ = {
+		7CA515205DBA9454F99AB302 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				855F97901E7846F600B354E1 /* PocketSVG.framework */,
-				855F97921E7846F600B354E1 /* PocketSVG.framework */,
+				F849C10CCDD5B08A91FB2F56 /* Pods_Aperobot.framework */,
 			);
-			name = Products;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		858285F01E8889330016C9DB /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				858285EE1E88892E0016C9DB /* Server.swift */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 		85FB7A501E781F0E0023BF09 = {
@@ -77,6 +73,8 @@
 			children = (
 				85FB7A5B1E781F0F0023BF09 /* Aperobot */,
 				85FB7A5A1E781F0F0023BF09 /* Products */,
+				ABEB3FF8CFB0B0D72CB6CC1C /* Pods */,
+				7CA515205DBA9454F99AB302 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +89,7 @@
 		85FB7A5B1E781F0F0023BF09 /* Aperobot */ = {
 			isa = PBXGroup;
 			children = (
+				858285F01E8889330016C9DB /* Config */,
 				85FB7A701E7825CA0023BF09 /* ProductCell.swift */,
 				85FB7A5C1E781F0F0023BF09 /* AppDelegate.swift */,
 				85FB7A5E1E781F0F0023BF09 /* ViewController.swift */,
@@ -102,9 +101,17 @@
 				85FB7A631E781F0F0023BF09 /* Assets.xcassets */,
 				85FB7A651E781F0F0023BF09 /* LaunchScreen.storyboard */,
 				85FB7A681E781F0F0023BF09 /* Info.plist */,
-				855F978A1E7846F600B354E1 /* PocketSVG.xcodeproj */,
 			);
 			path = Aperobot;
+			sourceTree = "<group>";
+		};
+		ABEB3FF8CFB0B0D72CB6CC1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AFC6B10CD3655E7594CB207 /* Pods-Aperobot.debug.xcconfig */,
+				BFB22E3FCDD1274DFCC4D613 /* Pods-Aperobot.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,9 +121,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85FB7A6B1E781F0F0023BF09 /* Build configuration list for PBXNativeTarget "Aperobot" */;
 			buildPhases = (
+				99F1EC971277B8451E43F380 /* [CP] Check Pods Manifest.lock */,
 				85FB7A551E781F0E0023BF09 /* Sources */,
 				85FB7A561E781F0E0023BF09 /* Frameworks */,
 				85FB7A571E781F0E0023BF09 /* Resources */,
+				982705FDD54CCC7AF88E775E /* [CP] Embed Pods Frameworks */,
+				2E1F6731F1BF219390CAB6BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,35 +165,12 @@
 			mainGroup = 85FB7A501E781F0E0023BF09;
 			productRefGroup = 85FB7A5A1E781F0F0023BF09 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 855F978B1E7846F600B354E1 /* Products */;
-					ProjectRef = 855F978A1E7846F600B354E1 /* PocketSVG.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				85FB7A581E781F0E0023BF09 /* Aperobot */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		855F97901E7846F600B354E1 /* PocketSVG.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = PocketSVG.framework;
-			remoteRef = 855F978F1E7846F600B354E1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		855F97921E7846F600B354E1 /* PocketSVG.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = PocketSVG.framework;
-			remoteRef = 855F97911E7846F600B354E1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		85FB7A571E781F0E0023BF09 /* Resources */ = {
@@ -198,6 +185,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E1F6731F1BF219390CAB6BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aperobot/Pods-Aperobot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		982705FDD54CCC7AF88E775E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aperobot/Pods-Aperobot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99F1EC971277B8451E43F380 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		85FB7A551E781F0E0023BF09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -209,6 +244,7 @@
 				8553497B1E789251008CCEB0 /* Cart.swift in Sources */,
 				85FB7A5F1E781F0F0023BF09 /* ViewController.swift in Sources */,
 				85DDD8C31E7DA2BE0064E6B3 /* CartViewController.swift in Sources */,
+				858285EF1E88892E0016C9DB /* Server.swift in Sources */,
 				85FB7A5D1E781F0F0023BF09 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +366,7 @@
 		};
 		85FB7A6C1E781F0F0023BF09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AFC6B10CD3655E7594CB207 /* Pods-Aperobot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6E5S82M4S4;
@@ -347,6 +384,7 @@
 		};
 		85FB7A6D1E781F0F0023BF09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFB22E3FCDD1274DFCC4D613 /* Pods-Aperobot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6E5S82M4S4;

@@ -9,6 +9,7 @@
 import UIKit
 
 class Cart: NSObject {
+    static var sharedInstance = Cart()
     var items = [String: Int]()
     
     func add(_ item: Product) {
@@ -29,7 +30,9 @@ class Cart: NSObject {
     }
     
     func reset() {
+        print(items)
         items = [:]
+        print(items)
     }
     
     func getCount(for product: Product) -> Int {

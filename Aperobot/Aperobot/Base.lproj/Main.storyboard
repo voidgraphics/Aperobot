@@ -14,7 +14,7 @@
         <scene sceneID="fSL-yv-Wbd">
             <objects>
                 <collectionViewController id="8gc-dl-642" customClass="ViewController" customModule="Aperobot" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="CTC-9d-Ii0">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="CTC-9d-Ii0">
                         <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,15 +151,15 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLv-OA-aPU">
-                                            <rect key="frame" x="305" y="17" width="52" height="21"/>
+                                            <rect key="frame" x="289" y="17" width="68" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gn-pP-ENS">
-                                            <rect key="frame" x="55" y="17" width="242" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gn-pP-ENS">
+                                            <rect key="frame" x="55" y="17" width="226" height="22"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="242" id="uAb-OL-RC9"/>
+                                                <constraint firstAttribute="width" constant="226" id="uAb-OL-RC9"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                             <nil key="textColor"/>
@@ -169,7 +169,7 @@
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="qLv-OA-aPU" secondAttribute="trailing" constant="10" id="8tC-Zh-lD3"/>
                                         <constraint firstItem="3gn-pP-ENS" firstAttribute="centerY" secondItem="Mdf-ra-NIx" secondAttribute="centerY" id="Fv7-sU-H2H"/>
-                                        <constraint firstItem="qLv-OA-aPU" firstAttribute="baseline" secondItem="3gn-pP-ENS" secondAttribute="baseline" id="OCZ-mO-CIn"/>
+                                        <constraint firstItem="qLv-OA-aPU" firstAttribute="baseline" secondItem="3gn-pP-ENS" secondAttribute="baseline" constant="-1" id="OCZ-mO-CIn"/>
                                         <constraint firstItem="Mdf-ra-NIx" firstAttribute="leading" secondItem="qjX-nH-3nP" secondAttribute="leadingMargin" constant="10" id="QJ0-gr-agM"/>
                                         <constraint firstItem="Mdf-ra-NIx" firstAttribute="top" secondItem="qjX-nH-3nP" secondAttribute="topMargin" constant="5" id="jaR-Tf-EHx"/>
                                         <constraint firstItem="qLv-OA-aPU" firstAttribute="leading" secondItem="3gn-pP-ENS" secondAttribute="trailing" constant="8" symbolic="YES" id="meT-sD-nLy"/>
@@ -192,7 +192,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KT7-6a-L84" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1820" y="92"/>
+            <point key="canvasLocation" x="1820" y="91.304347826086968"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wEI-Z1-g9h">
@@ -202,7 +202,7 @@
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="kd0-tp-mlh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="kd0-tp-mlh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
