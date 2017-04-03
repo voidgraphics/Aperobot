@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import Alamofire
 
-class CartViewController: CircleViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
+class CartViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
     var products = [Product]()
     var cartItemsArray = [String]()
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var totalLabel: UILabel!
+    
+    
+    @IBAction func pay(_ sender: Any) {
+        if let next = navigationController!.viewControllers.first as? ViewController {
+            let parameters: Parameters = ["items": Cart.sharedInstance.items]
+            Alamofire.request(Server.pay, method: .post, parameters: parameters)
+            next.resetOrder()
+            navigationController?.popToRootViewController(animated: true)
+        }
+    }
     
     @IBAction func circleTapped(sender:UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -21,23 +33,14 @@ class CartViewController: CircleViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         super.viewDidLoad()
+        totalLabel?.text = "Total: " + String(getTotalPrice()) + " €"
         cartItemsArray = Array(Cart.sharedInstance.items.keys)
-    }
-    
-    func pay() {
-        Cart.sharedInstance.reset()
-        navigationController!.popToRootViewController(animated: true)
     }
     
     func calculate() {
         navigationController!.popToRootViewController(animated: true)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let nextVC = segue.destination as? CartViewController {
-            nextVC.products = self.products
-        }
-    }
     @IBAction func back(_ sender: Any) {
         navigationController!.popToRootViewController(animated: true)
     }

@@ -12,14 +12,19 @@ import SwiftyJSON
 
 let cart = Cart()
 
-class ViewController: CircleViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var cartCountLabel: UILabel!
     
     @IBAction func circleTapped(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
     var products = [Product]()
+    
+    @IBAction func reset(_ sender: Any) {
+        resetOrder()
+    }
 
     @IBAction func addItem(_ sender: UIButton) {
         let product = products[sender.tag]
@@ -104,11 +109,10 @@ class ViewController: CircleViewController, UICollectionViewDelegate, UICollecti
     }
     
     func updateOrderCount() {
-        if var items = toolbarItems {
-            items[2].title = "Cart: " + String(Cart.sharedInstance.getFullCount())
-//            setToolbarItems(items, animated: true)
-        }
-         navigationItem.rightBarButtonItem?.title = "Cart: " + String(Cart.sharedInstance.getFullCount())
+        let count = Cart.sharedInstance.getFullCount()
+        cartCountLabel?.text = String(count)
+        cartCountLabel?.isHidden = count == 0
+    
     }
     
     func resetOrder() {
@@ -117,7 +121,7 @@ class ViewController: CircleViewController, UICollectionViewDelegate, UICollecti
             cell.updateCounter(0)
         }
         updateOrderCount()
-        collectionView?.reloadData()
+//        collectionView?.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

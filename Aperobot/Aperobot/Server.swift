@@ -8,10 +8,14 @@
 
 struct Server {
 
-    static let base = "http://192.168.0.4:3000"
+    static let base = "http://164.132.50.177:12345"
     
     static var list: String {
         get { return self.base + "/products" }
+    }
+    
+    static var pay: String {
+        get { return self.base + "/pay" }
     }
     
 }

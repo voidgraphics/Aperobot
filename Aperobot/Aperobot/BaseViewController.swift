@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CircleViewController: UIViewController {
+class BaseViewController: UIViewController {
 
     @IBOutlet weak var cartButton: UIButton!
     override func viewDidLoad() {
