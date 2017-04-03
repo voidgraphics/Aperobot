@@ -21,7 +21,7 @@ class BottomBarView: UIView {
     
     func drawShadow() {
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.3
+        self.layer.shadowOpacity = 0.2
         self.layer.shadowOffset = CGSize.zero
         self.layer.shadowRadius = 10
         self.layer.masksToBounds = false
