@@ -51,7 +51,7 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt2-Wh-MIu">
                                                     <rect key="frame" x="0.0" y="120" width="75" height="60"/>
-                                                    <color key="backgroundColor" red="0.27306922266519484" green="0.30106100504582545" blue="0.36451345754611408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.33199742436408997" green="0.36722323298454285" blue="0.44613385200500488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="Of7-n5-cuX"/>
                                                     </constraints>
@@ -68,7 +68,7 @@
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bD7-9x-Fsb">
                                                     <rect key="frame" x="75" y="120" width="75" height="60"/>
-                                                    <color key="backgroundColor" red="0.27347257733345032" green="0.30086150765419006" blue="0.36316180229187012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.3344642234436756" green="0.36874948512701394" blue="0.4464681494421292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
                                                     <state key="normal" title="+">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
