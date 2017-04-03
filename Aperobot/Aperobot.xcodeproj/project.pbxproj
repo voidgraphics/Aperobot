@@ -11,6 +11,10 @@
 		8553497B1E789251008CCEB0 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8553497A1E789251008CCEB0 /* Cart.swift */; };
 		858285EF1E88892E0016C9DB /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858285EE1E88892E0016C9DB /* Server.swift */; };
 		85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85864D2A1E80618900735E22 /* CartTableViewCell.swift */; };
+		85D9A63E1E91A7600072268F /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A63D1E91A7600072268F /* CircleTransitionAnimator.swift */; };
+		85D9A6401E91A78C0072268F /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A63F1E91A78C0072268F /* NavigationControllerDelegate.swift */; };
+		85D9A6431E91CB450072268F /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A6421E91CB450072268F /* CircleViewController.swift */; };
+		85D9A6451E91CFE60072268F /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A6441E91CFE60072268F /* BottomBarView.swift */; };
 		85DDD8C31E7DA2BE0064E6B3 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */; };
 		85FB7A5D1E781F0F0023BF09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FB7A5C1E781F0F0023BF09 /* AppDelegate.swift */; };
 		85FB7A5F1E781F0F0023BF09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FB7A5E1E781F0F0023BF09 /* ViewController.swift */; };
@@ -26,6 +30,10 @@
 		8553497A1E789251008CCEB0 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		858285EE1E88892E0016C9DB /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		85864D2A1E80618900735E22 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		85D9A63D1E91A7600072268F /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTransitionAnimator.swift; sourceTree = "<group>"; };
+		85D9A63F1E91A78C0072268F /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		85D9A6421E91CB450072268F /* CircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
+		85D9A6441E91CFE60072268F /* BottomBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
 		85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		85FB7A591E781F0F0023BF09 /* Aperobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aperobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FB7A5C1E781F0F0023BF09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,12 +68,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8544D6931E91DC5600B1EF7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8553497A1E789251008CCEB0 /* Cart.swift */,
+				85FB7A721E782B960023BF09 /* Product.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8544D6941E91DC7800B1EF7A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85FB7A701E7825CA0023BF09 /* ProductCell.swift */,
+				85D9A6441E91CFE60072268F /* BottomBarView.swift */,
+				85864D2A1E80618900735E22 /* CartTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8544D6951E91DCA300B1EF7A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85FB7A5E1E781F0F0023BF09 /* ViewController.swift */,
+				85D9A6421E91CB450072268F /* CircleViewController.swift */,
+				85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8544D6961E91DCC000B1EF7A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				85FB7A601E781F0F0023BF09 /* Main.storyboard */,
+				85FB7A651E781F0F0023BF09 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		858285F01E8889330016C9DB /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				858285EE1E88892E0016C9DB /* Server.swift */,
 			);
 			name = Config;
+			sourceTree = "<group>";
+		};
+		85D9A6411E91A79B0072268F /* Circle Animation */ = {
+			isa = PBXGroup;
+			children = (
+				85D9A63D1E91A7600072268F /* CircleTransitionAnimator.swift */,
+				85D9A63F1E91A78C0072268F /* NavigationControllerDelegate.swift */,
+			);
+			name = "Circle Animation";
 			sourceTree = "<group>";
 		};
 		85FB7A501E781F0E0023BF09 = {
@@ -90,16 +145,13 @@
 			isa = PBXGroup;
 			children = (
 				858285F01E8889330016C9DB /* Config */,
-				85FB7A701E7825CA0023BF09 /* ProductCell.swift */,
+				8544D6961E91DCC000B1EF7A /* Storyboards */,
+				8544D6951E91DCA300B1EF7A /* Controllers */,
+				8544D6941E91DC7800B1EF7A /* Views */,
+				8544D6931E91DC5600B1EF7A /* Models */,
+				85D9A6411E91A79B0072268F /* Circle Animation */,
 				85FB7A5C1E781F0F0023BF09 /* AppDelegate.swift */,
-				85FB7A5E1E781F0F0023BF09 /* ViewController.swift */,
-				8553497A1E789251008CCEB0 /* Cart.swift */,
-				85FB7A721E782B960023BF09 /* Product.swift */,
-				85FB7A601E781F0F0023BF09 /* Main.storyboard */,
-				85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */,
-				85864D2A1E80618900735E22 /* CartTableViewCell.swift */,
 				85FB7A631E781F0F0023BF09 /* Assets.xcassets */,
-				85FB7A651E781F0F0023BF09 /* LaunchScreen.storyboard */,
 				85FB7A681E781F0F0023BF09 /* Info.plist */,
 			);
 			path = Aperobot;
@@ -238,11 +290,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D9A6401E91A78C0072268F /* NavigationControllerDelegate.swift in Sources */,
+				85D9A6431E91CB450072268F /* CircleViewController.swift in Sources */,
 				85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */,
+				85D9A6451E91CFE60072268F /* BottomBarView.swift in Sources */,
 				85FB7A711E7825CA0023BF09 /* ProductCell.swift in Sources */,
 				85FB7A731E782B960023BF09 /* Product.swift in Sources */,
 				8553497B1E789251008CCEB0 /* Cart.swift in Sources */,
 				85FB7A5F1E781F0F0023BF09 /* ViewController.swift in Sources */,
+				85D9A63E1E91A7600072268F /* CircleTransitionAnimator.swift in Sources */,
 				85DDD8C31E7DA2BE0064E6B3 /* CartViewController.swift in Sources */,
 				858285EF1E88892E0016C9DB /* Server.swift in Sources */,
 				85FB7A5D1E781F0F0023BF09 /* AppDelegate.swift in Sources */,

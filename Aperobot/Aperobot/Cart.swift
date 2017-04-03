@@ -30,9 +30,7 @@ class Cart: NSObject {
     }
     
     func reset() {
-        print(items)
         items = [:]
-        print(items)
     }
     
     func getCount(for product: Product) -> Int {

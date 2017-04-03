@@ -8,19 +8,20 @@
 
 import UIKit
 
-class CartViewController: UITableViewController, UIViewControllerTransitioningDelegate {
+class CartViewController: CircleViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate {
     var products = [Product]()
     var cartItemsArray = [String]()
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func circleTapped(sender:UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     override func viewDidLoad() {
+        tableView.delegate = self
+        tableView.dataSource = self
         super.viewDidLoad()
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir Next", size: 12)!]
-        
-        setToolbar()
-        
         cartItemsArray = Array(Cart.sharedInstance.items.keys)
-        let total = UIBarButtonItem(title: "Total " + String(getTotalPrice()) + " €", style: .plain, target: nil, action: nil)
-        navigationItem.rightBarButtonItem = total
     }
     
     func pay() {
@@ -32,19 +33,20 @@ class CartViewController: UITableViewController, UIViewControllerTransitioningDe
         navigationController!.popToRootViewController(animated: true)
     }
     
-    func setToolbar() {
-        navigationController?.setToolbarHidden(false, animated: true)
-        let calculateButton = UIBarButtonItem(title: "Calculate", style: .plain, target: self, action: #selector(calculate))
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let payButton = UIBarButtonItem(title: "Pay " + String(getTotalPrice()) + " €", style: .plain, target: self, action: #selector(pay))
-        setToolbarItems([calculateButton, flexibleSpace, payButton], animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextVC = segue.destination as? CartViewController {
+            nextVC.products = self.products
+        }
+    }
+    @IBAction func back(_ sender: Any) {
+        navigationController!.popToRootViewController(animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Cart.sharedInstance.items.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Product", for: indexPath) as! CartTableViewCell
         let productName = cartItemsArray[indexPath.row]
         if let product = self.products.first(where: { $0.name == productName }) {
@@ -76,16 +78,6 @@ class CartViewController: UITableViewController, UIViewControllerTransitioningDe
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated);
-        self.navigationController?.setToolbarHidden(false, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated);
-        self.navigationController?.setToolbarHidden(true, animated: animated)
     }
 
     /*

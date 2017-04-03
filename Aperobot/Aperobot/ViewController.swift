@@ -12,7 +12,12 @@ import SwiftyJSON
 
 let cart = Cart()
 
-class ViewController: UICollectionViewController {
+class ViewController: CircleViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBAction func circleTapped(sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     var products = [Product]()
 
@@ -31,32 +36,46 @@ class ViewController: UICollectionViewController {
     }
     
     override func viewDidLoad() {
+        collectionView!.delegate = self
+        collectionView!.dataSource = self
         super.viewDidLoad()
-        setNavBar()
         populateProducts()
+        setSwipeEvents()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        print(Cart.sharedInstance.items)
+    func setSwipeEvents() {
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.right
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        view.addGestureRecognizer(swipeRight)
+        view.addGestureRecognizer(swipeLeft)
     }
     
-    func setNavBar() {
-        let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetOrder))
-        navigationItem.leftBarButtonItem = refreshButton
-        let cartButton = UIBarButtonItem(title: "Cart: " + String(Cart.sharedInstance.getFullCount()), style: .plain, target: self, action: #selector(showCart))
-        navigationItem.rightBarButtonItem = cartButton
+    func didSwipe(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.right:
+                print("swiped right")
+            case UISwipeGestureRecognizerDirection.left:
+                print("swiped left")
+                showCart()
+            default:
+                break
+            }
+        }
     }
     
-    func setToolbar() {
-        navigationController?.setToolbarHidden(false, animated: true)
-        let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetOrder))
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let cartButton = UIBarButtonItem(title: String(Cart.sharedInstance.getFullCount()), style: .plain, target: self, action: #selector(showCart))
-        setToolbarItems([refreshButton, flexibleSpace, cartButton], animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PushSegue" {
+            if let nextVC = segue.destination as? CartViewController {
+                nextVC.products = self.products
+            }
+        }
     }
     
     func showCart() {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "Cart") as? CartViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Cart2") as? CartViewController {
             vc.products = self.products
             navigationController?.pushViewController(vc, animated: true)
         }
@@ -75,7 +94,6 @@ class ViewController: UICollectionViewController {
                 }
             }
         }
-        
     }
     
     func updateItemCount(tag: Int, product: Product) {
@@ -88,7 +106,7 @@ class ViewController: UICollectionViewController {
     func updateOrderCount() {
         if var items = toolbarItems {
             items[2].title = "Cart: " + String(Cart.sharedInstance.getFullCount())
-            setToolbarItems(items, animated: true)
+//            setToolbarItems(items, animated: true)
         }
          navigationItem.rightBarButtonItem?.title = "Cart: " + String(Cart.sharedInstance.getFullCount())
     }
@@ -102,11 +120,11 @@ class ViewController: UICollectionViewController {
         collectionView?.reloadData()
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Product", for: indexPath) as! ProductCell
         let product = products[indexPath.item]
         cell.populate(product, indexPath.row)
