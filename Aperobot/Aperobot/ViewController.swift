@@ -61,9 +61,8 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
             case UISwipeGestureRecognizerDirection.right:
-                print("swiped right")
+                showSales()
             case UISwipeGestureRecognizerDirection.left:
-                print("swiped left")
                 showCart()
             default:
                 break
@@ -83,6 +82,35 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Cart2") as? CartViewController {
             vc.products = self.products
             navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func showSales() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Sales") as? SalesViewController {
+            // TODO: get sales
+            print("got response")
+            vc.products = self.products
+            var sales = [Product]()
+            Alamofire.request(Server.sales).responseJSON { response in
+                if (response.result.value as! NSDictionary?) != nil {
+                    let jsonResponse = JSON(response.result.value as Any)
+                    if let responseProducts = jsonResponse["products"] as JSON? {
+                        for (_,product):(String, JSON) in responseProducts {
+                            let prod = Product(name: product["name"].stringValue, image: product["icon"].stringValue, salePrice: product["salePrice"].floatValue, price: product["price"].floatValue)
+                            prod.sold = product["sold"].intValue
+                            sales.append(prod)
+                        }
+                        vc.sales = sales
+                        
+                        if let totalincome = jsonResponse["totalIncome"] as JSON? {
+                            vc.totalIncome = totalincome.floatValue
+                        }
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+            }
+            
+            
         }
     }
     
@@ -115,13 +143,13 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
     
     }
     
-    func resetOrder() {
+    func resetOrder(callback: (() -> ())? = nil) {
         Cart.sharedInstance.reset()
         for cell in collectionView!.visibleCells as! [ProductCell] {
             cell.updateCounter(0)
         }
         updateOrderCount()
-//        collectionView?.reloadData()
+        callback?()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

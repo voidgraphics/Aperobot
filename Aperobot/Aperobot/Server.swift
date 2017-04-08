@@ -18,4 +18,8 @@ struct Server {
         get { return self.base + "/pay" }
     }
     
+    static var sales: String {
+        get { return self.base + "/sales" }
+    }
+    
 }

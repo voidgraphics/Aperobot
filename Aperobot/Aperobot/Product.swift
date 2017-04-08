@@ -13,6 +13,7 @@ class Product: NSObject {
     var image: String
     var salePrice: Float
     var price: Float
+    var sold: Int?
     
     init(name: String, image: String, salePrice: Float, price: Float) {
         self.name = name

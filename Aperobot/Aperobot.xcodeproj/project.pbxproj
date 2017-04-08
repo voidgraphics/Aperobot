@@ -11,6 +11,7 @@
 		8553497B1E789251008CCEB0 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8553497A1E789251008CCEB0 /* Cart.swift */; };
 		858285EF1E88892E0016C9DB /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858285EE1E88892E0016C9DB /* Server.swift */; };
 		85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85864D2A1E80618900735E22 /* CartTableViewCell.swift */; };
+		85AD10801E999E560099387D /* SalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD107F1E999E560099387D /* SalesViewController.swift */; };
 		85D9A63E1E91A7600072268F /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A63D1E91A7600072268F /* CircleTransitionAnimator.swift */; };
 		85D9A6401E91A78C0072268F /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A63F1E91A78C0072268F /* NavigationControllerDelegate.swift */; };
 		85D9A6431E91CB450072268F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A6421E91CB450072268F /* BaseViewController.swift */; };
@@ -30,6 +31,7 @@
 		8553497A1E789251008CCEB0 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		858285EE1E88892E0016C9DB /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		85864D2A1E80618900735E22 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		85AD107F1E999E560099387D /* SalesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesViewController.swift; sourceTree = "<group>"; };
 		85D9A63D1E91A7600072268F /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTransitionAnimator.swift; sourceTree = "<group>"; };
 		85D9A63F1E91A78C0072268F /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		85D9A6421E91CB450072268F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				85FB7A5E1E781F0F0023BF09 /* ViewController.swift */,
 				85D9A6421E91CB450072268F /* BaseViewController.swift */,
 				85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */,
+				85AD107F1E999E560099387D /* SalesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85AD10801E999E560099387D /* SalesViewController.swift in Sources */,
 				85D9A6401E91A78C0072268F /* NavigationControllerDelegate.swift in Sources */,
 				85D9A6431E91CB450072268F /* BaseViewController.swift in Sources */,
 				85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */,
