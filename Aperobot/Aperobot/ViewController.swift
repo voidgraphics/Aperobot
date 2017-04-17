@@ -87,8 +87,6 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
     
     func showSales() {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Sales") as? SalesViewController {
-            // TODO: get sales
-            print("got response")
             vc.products = self.products
             var sales = [Product]()
             Alamofire.request(Server.sales).responseJSON { response in
@@ -98,6 +96,7 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
                         for (_,product):(String, JSON) in responseProducts {
                             let prod = Product(name: product["name"].stringValue, image: product["icon"].stringValue, salePrice: product["salePrice"].floatValue, price: product["price"].floatValue)
                             prod.sold = product["sold"].intValue
+                            prod.availability = product["availability"].intValue
                             sales.append(prod)
                         }
                         vc.sales = sales
@@ -105,12 +104,14 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
                         if let totalincome = jsonResponse["totalIncome"] as JSON? {
                             vc.totalIncome = totalincome.floatValue
                         }
+                        
+                        if let netincome = jsonResponse["netIncome"] as JSON? {
+                            vc.netIncome = netincome.floatValue
+                        }
                         self.navigationController?.pushViewController(vc, animated: true)
                     }
                 }
             }
-            
-            
         }
     }
     

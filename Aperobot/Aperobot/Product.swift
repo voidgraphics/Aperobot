@@ -14,6 +14,7 @@ class Product: NSObject {
     var salePrice: Float
     var price: Float
     var sold: Int?
+    var availability: Int?
     
     init(name: String, image: String, salePrice: Float, price: Float) {
         self.name = name

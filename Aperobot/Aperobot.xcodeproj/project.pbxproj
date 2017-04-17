@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		51EC83EE9606C70E1F3B0BA7 /* Pods_Aperobot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F849C10CCDD5B08A91FB2F56 /* Pods_Aperobot.framework */; };
+		8545FC6E1E99C409005FA610 /* AvailabilityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545FC6D1E99C409005FA610 /* AvailabilityLabel.swift */; };
 		8553497B1E789251008CCEB0 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8553497A1E789251008CCEB0 /* Cart.swift */; };
 		858285EF1E88892E0016C9DB /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858285EE1E88892E0016C9DB /* Server.swift */; };
 		85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85864D2A1E80618900735E22 /* CartTableViewCell.swift */; };
 		85AD10801E999E560099387D /* SalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD107F1E999E560099387D /* SalesViewController.swift */; };
+		85AD10821E99B1B30099387D /* SaleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD10811E99B1B30099387D /* SaleTableViewCell.swift */; };
 		85D9A63E1E91A7600072268F /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A63D1E91A7600072268F /* CircleTransitionAnimator.swift */; };
 		85D9A6401E91A78C0072268F /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A63F1E91A78C0072268F /* NavigationControllerDelegate.swift */; };
 		85D9A6431E91CB450072268F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A6421E91CB450072268F /* BaseViewController.swift */; };
@@ -28,10 +30,12 @@
 
 /* Begin PBXFileReference section */
 		0AFC6B10CD3655E7594CB207 /* Pods-Aperobot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aperobot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aperobot/Pods-Aperobot.debug.xcconfig"; sourceTree = "<group>"; };
+		8545FC6D1E99C409005FA610 /* AvailabilityLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityLabel.swift; sourceTree = "<group>"; };
 		8553497A1E789251008CCEB0 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		858285EE1E88892E0016C9DB /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		85864D2A1E80618900735E22 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		85AD107F1E999E560099387D /* SalesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesViewController.swift; sourceTree = "<group>"; };
+		85AD10811E99B1B30099387D /* SaleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleTableViewCell.swift; sourceTree = "<group>"; };
 		85D9A63D1E91A7600072268F /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTransitionAnimator.swift; sourceTree = "<group>"; };
 		85D9A63F1E91A78C0072268F /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		85D9A6421E91CB450072268F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				85FB7A701E7825CA0023BF09 /* ProductCell.swift */,
 				85D9A6441E91CFE60072268F /* BottomBarView.swift */,
 				85864D2A1E80618900735E22 /* CartTableViewCell.swift */,
+				85AD10811E99B1B30099387D /* SaleTableViewCell.swift */,
+				8545FC6D1E99C409005FA610 /* AvailabilityLabel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -199,7 +205,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Adrien Leloup";
 				TargetAttributes = {
 					85FB7A581E781F0E0023BF09 = {
@@ -301,8 +307,10 @@
 				85FB7A711E7825CA0023BF09 /* ProductCell.swift in Sources */,
 				85FB7A731E782B960023BF09 /* Product.swift in Sources */,
 				8553497B1E789251008CCEB0 /* Cart.swift in Sources */,
+				85AD10821E99B1B30099387D /* SaleTableViewCell.swift in Sources */,
 				85FB7A5F1E781F0F0023BF09 /* ViewController.swift in Sources */,
 				85D9A63E1E91A7600072268F /* CircleTransitionAnimator.swift in Sources */,
+				8545FC6E1E99C409005FA610 /* AvailabilityLabel.swift in Sources */,
 				85DDD8C31E7DA2BE0064E6B3 /* CartViewController.swift in Sources */,
 				858285EF1E88892E0016C9DB /* Server.swift in Sources */,
 				85FB7A5D1E781F0F0023BF09 /* AppDelegate.swift in Sources */,
@@ -356,6 +364,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;

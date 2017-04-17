@@ -14,6 +14,7 @@ class SalesViewController: BaseViewController, UITableViewDelegate, UITableViewD
     var cartItemsArray = [String]()
     var sales = [Product]()
     var totalIncome: Float?
+    var netIncome: Float?
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalLabel: UILabel!
     
@@ -27,7 +28,7 @@ class SalesViewController: BaseViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         super.viewDidLoad()
         setSwipeEvents()
-        totalLabel.text = "Caisse: " + String(totalIncome ?? 0) + " €"
+        totalLabel.text = "Caisse: " + String(totalIncome!) + " €  -  Profits: " + String(netIncome!) + " €"
         cartItemsArray = Array(Cart.sharedInstance.items.keys)
     }
     
@@ -44,16 +45,17 @@ class SalesViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Product", for: indexPath) as! CartTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Product", for: indexPath) as! SaleTableViewCell
         let sale = sales[indexPath.row]
-        
-        if let product = self.products.first(where: { $0.name == sale.name }) {
+        if self.products.first(where: { $0.name == sale.name }) != nil {
             if let amount = sale.sold {
                 let floatAmount = Float(amount)
-                let totalPrice = product.salePrice * floatAmount
                 cell.counter?.text = String(amount)
-                cell.price?.text = String(totalPrice) + " €"
+                cell.price?.text = String(sale.availability! - sale.sold!) + "/" + String(sale.availability!)
                 cell.label?.text = sale.name
+                let percent: Float = floatAmount / Float(sale.availability!)
+                cell.progress?.setProgress(1.0 - percent, animated: true)
+                cell.progress?.transform = CGAffineTransform(scaleX: 1, y: 2)
             }
             
         } else {
