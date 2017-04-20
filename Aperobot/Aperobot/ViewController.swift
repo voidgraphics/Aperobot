@@ -29,14 +29,14 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
     @IBAction func addItem(_ sender: UIButton) {
         let product = products[sender.tag]
         Cart.sharedInstance.add(product)
-        updateItemCount(tag: sender.tag, product: product)
+        updateItemCount(amount: 1, product: product)
         updateOrderCount()
     }
     
     @IBAction func rmvItem(_ sender: UIButton) {
         let product = products[sender.tag]
         Cart.sharedInstance.remove(product)
-        updateItemCount(tag: sender.tag, product: product)
+        updateItemCount(amount: -1, product: product)
         updateOrderCount()
     }
     
@@ -130,25 +130,25 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
         }
     }
     
-    func updateItemCount(tag: Int, product: Product) {
-        let indexPath = IndexPath(item: tag, section: 0)
-        if let cell = collectionView!.cellForItem(at: indexPath) as? ProductCell {
-            cell.updateCounter(Cart.sharedInstance.getCount(for: product))
-        }
+    func updateItemCount(amount: Int, product: Product) {
+        print(product.inCart)
+        product.inCart += amount
+        if(product.inCart < 0) { product.inCart = 0 }
+        collectionView?.reloadData()
     }
     
     func updateOrderCount() {
         let count = Cart.sharedInstance.getFullCount()
         cartCountLabel?.text = String(count)
         cartCountLabel?.isHidden = count == 0
-    
     }
     
     func resetOrder(callback: (() -> ())? = nil) {
         Cart.sharedInstance.reset()
-        for cell in collectionView!.visibleCells as! [ProductCell] {
-            cell.updateCounter(0)
+        for product in products {
+            product.inCart = 0
         }
+        collectionView?.reloadData()
         updateOrderCount()
         callback?()
     }

@@ -29,6 +29,7 @@ class ProductCell: UICollectionViewCell {
         setText(product.name)
         addBtn.tag = row
         rmvBtn.tag = row
+        updateCounter(product.inCart)
         drawImage(product.image)
     }
     
