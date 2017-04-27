@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12BC75701EB24A3200C1699D /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BC756F1EB24A3200C1699D /* Montserrat-Black.otf */; };
+		12BC75721EB24AA400C1699D /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12BC75711EB24AA400C1699D /* Lato-Regular.ttf */; };
+		12BC75741EB24ACE00C1699D /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12BC75731EB24ACE00C1699D /* Lato-Black.ttf */; };
+		12BC75761EB24AD700C1699D /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12BC75751EB24AD700C1699D /* Lato-Bold.ttf */; };
 		12E478FE1EA94D4B00AB9FC9 /* RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E478FD1EA94D4B00AB9FC9 /* RoundCorners.swift */; };
 		12E479001EA9543D00AB9FC9 /* CounterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E478FF1EA9543D00AB9FC9 /* CounterLabel.swift */; };
 		12E479021EA9585600AB9FC9 /* MinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E479011EA9585600AB9FC9 /* MinButton.swift */; };
@@ -35,6 +39,10 @@
 
 /* Begin PBXFileReference section */
 		0AFC6B10CD3655E7594CB207 /* Pods-Aperobot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aperobot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aperobot/Pods-Aperobot.debug.xcconfig"; sourceTree = "<group>"; };
+		12BC756F1EB24A3200C1699D /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		12BC75711EB24AA400C1699D /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		12BC75731EB24ACE00C1699D /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		12BC75751EB24AD700C1699D /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		12E478FD1EA94D4B00AB9FC9 /* RoundCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCorners.swift; sourceTree = "<group>"; };
 		12E478FF1EA9543D00AB9FC9 /* CounterLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterLabel.swift; sourceTree = "<group>"; };
 		12E479011EA9585600AB9FC9 /* MinButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinButton.swift; sourceTree = "<group>"; };
@@ -76,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12BC755E1EB248C600C1699D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				12BC75711EB24AA400C1699D /* Lato-Regular.ttf */,
+				12BC75751EB24AD700C1699D /* Lato-Bold.ttf */,
+				12BC75731EB24ACE00C1699D /* Lato-Black.ttf */,
+				12BC756F1EB24A3200C1699D /* Montserrat-Black.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		12E478FC1EA94D3000AB9FC9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +194,7 @@
 		85FB7A5B1E781F0F0023BF09 /* Aperobot */ = {
 			isa = PBXGroup;
 			children = (
+				12BC755E1EB248C600C1699D /* Fonts */,
 				12E478FC1EA94D3000AB9FC9 /* Extensions */,
 				858285F01E8889330016C9DB /* Config */,
 				8544D6961E91DCC000B1EF7A /* Storyboards */,
@@ -261,8 +281,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12BC75761EB24AD700C1699D /* Lato-Bold.ttf in Resources */,
+				12BC75701EB24A3200C1699D /* Montserrat-Black.otf in Resources */,
 				85FB7A671E781F0F0023BF09 /* LaunchScreen.storyboard in Resources */,
+				12BC75721EB24AA400C1699D /* Lato-Regular.ttf in Resources */,
 				85FB7A641E781F0F0023BF09 /* Assets.xcassets in Resources */,
+				12BC75741EB24ACE00C1699D /* Lato-Black.ttf in Resources */,
 				85FB7A621E781F0F0023BF09 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

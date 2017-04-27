@@ -36,7 +36,7 @@ class CartViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         super.viewDidLoad()
         setSwipeEvents()
-        totalLabel?.text = "Total: " + String(getTotalPrice()) + " €"
+        totalLabel?.text = "Total:  " + String(getTotalPrice()) + " €"
         cartItemsArray = Array(Cart.sharedInstance.items.keys)
     }
     

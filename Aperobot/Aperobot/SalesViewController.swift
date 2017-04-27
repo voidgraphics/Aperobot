@@ -13,8 +13,8 @@ class SalesViewController: BaseViewController, UITableViewDelegate, UITableViewD
     var products = [Product]()
     var cartItemsArray = [String]()
     var sales = [Product]()
-    var totalIncome: Float?
-    var netIncome: Float?
+    var totalIncome: Float = 0
+    var netIncome: Float = 0
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalLabel: UILabel!
     
@@ -28,7 +28,7 @@ class SalesViewController: BaseViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         super.viewDidLoad()
         setSwipeEvents()
-        totalLabel.text = "Caisse: " + String(totalIncome!) + " €  -  Profits: " + String(netIncome!) + " €"
+        totalLabel.text = "Caisse: " + String(totalIncome) + " €  -  Profits: " + String(netIncome) + " €"
         cartItemsArray = Array(Cart.sharedInstance.items.keys)
     }
     
