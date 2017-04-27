@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12E478FE1EA94D4B00AB9FC9 /* RoundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E478FD1EA94D4B00AB9FC9 /* RoundCorners.swift */; };
+		12E479001EA9543D00AB9FC9 /* CounterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E478FF1EA9543D00AB9FC9 /* CounterLabel.swift */; };
+		12E479021EA9585600AB9FC9 /* MinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E479011EA9585600AB9FC9 /* MinButton.swift */; };
+		12E479041EA9587F00AB9FC9 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E479031EA9587F00AB9FC9 /* PlusButton.swift */; };
+		12E479061EA95CDD00AB9FC9 /* RoundShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E479051EA95CDD00AB9FC9 /* RoundShadow.swift */; };
 		51EC83EE9606C70E1F3B0BA7 /* Pods_Aperobot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F849C10CCDD5B08A91FB2F56 /* Pods_Aperobot.framework */; };
 		8545FC6E1E99C409005FA610 /* AvailabilityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545FC6D1E99C409005FA610 /* AvailabilityLabel.swift */; };
 		8553497B1E789251008CCEB0 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8553497A1E789251008CCEB0 /* Cart.swift */; };
@@ -30,6 +35,11 @@
 
 /* Begin PBXFileReference section */
 		0AFC6B10CD3655E7594CB207 /* Pods-Aperobot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aperobot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aperobot/Pods-Aperobot.debug.xcconfig"; sourceTree = "<group>"; };
+		12E478FD1EA94D4B00AB9FC9 /* RoundCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCorners.swift; sourceTree = "<group>"; };
+		12E478FF1EA9543D00AB9FC9 /* CounterLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterLabel.swift; sourceTree = "<group>"; };
+		12E479011EA9585600AB9FC9 /* MinButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinButton.swift; sourceTree = "<group>"; };
+		12E479031EA9587F00AB9FC9 /* PlusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
+		12E479051EA95CDD00AB9FC9 /* RoundShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundShadow.swift; sourceTree = "<group>"; };
 		8545FC6D1E99C409005FA610 /* AvailabilityLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityLabel.swift; sourceTree = "<group>"; };
 		8553497A1E789251008CCEB0 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		858285EE1E88892E0016C9DB /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
@@ -66,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12E478FC1EA94D3000AB9FC9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12E478FD1EA94D4B00AB9FC9 /* RoundCorners.swift */,
+				12E479051EA95CDD00AB9FC9 /* RoundShadow.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		7CA515205DBA9454F99AB302 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +110,9 @@
 				85864D2A1E80618900735E22 /* CartTableViewCell.swift */,
 				85AD10811E99B1B30099387D /* SaleTableViewCell.swift */,
 				8545FC6D1E99C409005FA610 /* AvailabilityLabel.swift */,
+				12E478FF1EA9543D00AB9FC9 /* CounterLabel.swift */,
+				12E479011EA9585600AB9FC9 /* MinButton.swift */,
+				12E479031EA9587F00AB9FC9 /* PlusButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -153,6 +175,7 @@
 		85FB7A5B1E781F0F0023BF09 /* Aperobot */ = {
 			isa = PBXGroup;
 			children = (
+				12E478FC1EA94D3000AB9FC9 /* Extensions */,
 				858285F01E8889330016C9DB /* Config */,
 				8544D6961E91DCC000B1EF7A /* Storyboards */,
 				8544D6951E91DCA300B1EF7A /* Controllers */,
@@ -300,9 +323,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				85AD10801E999E560099387D /* SalesViewController.swift in Sources */,
+				12E479041EA9587F00AB9FC9 /* PlusButton.swift in Sources */,
 				85D9A6401E91A78C0072268F /* NavigationControllerDelegate.swift in Sources */,
 				85D9A6431E91CB450072268F /* BaseViewController.swift in Sources */,
+				12E478FE1EA94D4B00AB9FC9 /* RoundCorners.swift in Sources */,
 				85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */,
+				12E479061EA95CDD00AB9FC9 /* RoundShadow.swift in Sources */,
+				12E479001EA9543D00AB9FC9 /* CounterLabel.swift in Sources */,
 				85D9A6451E91CFE60072268F /* BottomBarView.swift in Sources */,
 				85FB7A711E7825CA0023BF09 /* ProductCell.swift in Sources */,
 				85FB7A731E782B960023BF09 /* Product.swift in Sources */,
@@ -313,6 +340,7 @@
 				8545FC6E1E99C409005FA610 /* AvailabilityLabel.swift in Sources */,
 				85DDD8C31E7DA2BE0064E6B3 /* CartViewController.swift in Sources */,
 				858285EF1E88892E0016C9DB /* Server.swift in Sources */,
+				12E479021EA9585600AB9FC9 /* MinButton.swift in Sources */,
 				85FB7A5D1E781F0F0023BF09 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

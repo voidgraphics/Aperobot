@@ -20,6 +20,9 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func tappedSalesButton(_ sender: Any) {
+        showSales()
+    }
     var products = [Product]()
     
     @IBAction func reset(_ sender: Any) {

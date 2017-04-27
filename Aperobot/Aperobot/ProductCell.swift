@@ -14,15 +14,20 @@ class ProductCell: UICollectionViewCell {
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var rmvBtn: UIButton!
     @IBOutlet weak var counter: UILabel!
+    var shadowLayer: CAShapeLayer!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        drawShadow()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        drawShadow()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+//        self.roundCorners([.bottomLeft, .bottomRight, .topLeft, .topRight], radius: 4)
+//        self.drawShadow()
     }
     
     func populate(_ product: Product, _ row: Int) {
@@ -34,7 +39,7 @@ class ProductCell: UICollectionViewCell {
     }
     
     func setText(_ text: String) {
-        name.text = text.uppercased()
+        name.text = text
     }
     
     func drawImage(_ name: String) {
@@ -49,11 +54,18 @@ class ProductCell: UICollectionViewCell {
     }
     
     func drawShadow() {
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.1
-        self.layer.shadowOffset = CGSize.zero
-        self.layer.shadowRadius = 10
-        self.layer.masksToBounds = false
-        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+        if shadowLayer == nil {
+            shadowLayer = CAShapeLayer()
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
+//            shadowLayer.fillColor = UIColor.white.cgColor
+            shadowLayer.masksToBounds = false
+            shadowLayer.shadowColor = UIColor.black.cgColor
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.shadowOffset = CGSize.zero
+            shadowLayer.shadowOpacity = 0.1
+            shadowLayer.shadowRadius = 10
+            
+            layer.insertSublayer(shadowLayer, at: 0)
+        }
     }
 }
