@@ -18,13 +18,12 @@
 		12E479061EA95CDD00AB9FC9 /* RoundShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E479051EA95CDD00AB9FC9 /* RoundShadow.swift */; };
 		51EC83EE9606C70E1F3B0BA7 /* Pods_Aperobot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F849C10CCDD5B08A91FB2F56 /* Pods_Aperobot.framework */; };
 		8545FC6E1E99C409005FA610 /* AvailabilityLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8545FC6D1E99C409005FA610 /* AvailabilityLabel.swift */; };
+		854804C91EB6BC3000318E8F /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854804C81EB6BC3000318E8F /* PayViewController.swift */; };
 		8553497B1E789251008CCEB0 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8553497A1E789251008CCEB0 /* Cart.swift */; };
 		858285EF1E88892E0016C9DB /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858285EE1E88892E0016C9DB /* Server.swift */; };
 		85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85864D2A1E80618900735E22 /* CartTableViewCell.swift */; };
 		85AD10801E999E560099387D /* SalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD107F1E999E560099387D /* SalesViewController.swift */; };
 		85AD10821E99B1B30099387D /* SaleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AD10811E99B1B30099387D /* SaleTableViewCell.swift */; };
-		85D9A63E1E91A7600072268F /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A63D1E91A7600072268F /* CircleTransitionAnimator.swift */; };
-		85D9A6401E91A78C0072268F /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A63F1E91A78C0072268F /* NavigationControllerDelegate.swift */; };
 		85D9A6431E91CB450072268F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A6421E91CB450072268F /* BaseViewController.swift */; };
 		85D9A6451E91CFE60072268F /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D9A6441E91CFE60072268F /* BottomBarView.swift */; };
 		85DDD8C31E7DA2BE0064E6B3 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */; };
@@ -49,13 +48,12 @@
 		12E479031EA9587F00AB9FC9 /* PlusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		12E479051EA95CDD00AB9FC9 /* RoundShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundShadow.swift; sourceTree = "<group>"; };
 		8545FC6D1E99C409005FA610 /* AvailabilityLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityLabel.swift; sourceTree = "<group>"; };
+		854804C81EB6BC3000318E8F /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		8553497A1E789251008CCEB0 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		858285EE1E88892E0016C9DB /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		85864D2A1E80618900735E22 /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		85AD107F1E999E560099387D /* SalesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesViewController.swift; sourceTree = "<group>"; };
 		85AD10811E99B1B30099387D /* SaleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleTableViewCell.swift; sourceTree = "<group>"; };
-		85D9A63D1E91A7600072268F /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTransitionAnimator.swift; sourceTree = "<group>"; };
-		85D9A63F1E91A78C0072268F /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
 		85D9A6421E91CB450072268F /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		85D9A6441E91CFE60072268F /* BottomBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
 		85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				85FB7A5E1E781F0F0023BF09 /* ViewController.swift */,
+				854804C81EB6BC3000318E8F /* PayViewController.swift */,
 				85D9A6421E91CB450072268F /* BaseViewController.swift */,
 				85DDD8C21E7DA2BE0064E6B3 /* CartViewController.swift */,
 				85AD107F1E999E560099387D /* SalesViewController.swift */,
@@ -162,15 +161,6 @@
 				858285EE1E88892E0016C9DB /* Server.swift */,
 			);
 			name = Config;
-			sourceTree = "<group>";
-		};
-		85D9A6411E91A79B0072268F /* Circle Animation */ = {
-			isa = PBXGroup;
-			children = (
-				85D9A63D1E91A7600072268F /* CircleTransitionAnimator.swift */,
-				85D9A63F1E91A78C0072268F /* NavigationControllerDelegate.swift */,
-			);
-			name = "Circle Animation";
 			sourceTree = "<group>";
 		};
 		85FB7A501E781F0E0023BF09 = {
@@ -201,7 +191,6 @@
 				8544D6951E91DCA300B1EF7A /* Controllers */,
 				8544D6941E91DC7800B1EF7A /* Views */,
 				8544D6931E91DC5600B1EF7A /* Models */,
-				85D9A6411E91A79B0072268F /* Circle Animation */,
 				85FB7A5C1E781F0F0023BF09 /* AppDelegate.swift */,
 				85FB7A631E781F0F0023BF09 /* Assets.xcassets */,
 				85FB7A681E781F0F0023BF09 /* Info.plist */,
@@ -348,7 +337,6 @@
 			files = (
 				85AD10801E999E560099387D /* SalesViewController.swift in Sources */,
 				12E479041EA9587F00AB9FC9 /* PlusButton.swift in Sources */,
-				85D9A6401E91A78C0072268F /* NavigationControllerDelegate.swift in Sources */,
 				85D9A6431E91CB450072268F /* BaseViewController.swift in Sources */,
 				12E478FE1EA94D4B00AB9FC9 /* RoundCorners.swift in Sources */,
 				85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */,
@@ -359,8 +347,8 @@
 				85FB7A731E782B960023BF09 /* Product.swift in Sources */,
 				8553497B1E789251008CCEB0 /* Cart.swift in Sources */,
 				85AD10821E99B1B30099387D /* SaleTableViewCell.swift in Sources */,
+				854804C91EB6BC3000318E8F /* PayViewController.swift in Sources */,
 				85FB7A5F1E781F0F0023BF09 /* ViewController.swift in Sources */,
-				85D9A63E1E91A7600072268F /* CircleTransitionAnimator.swift in Sources */,
 				8545FC6E1E99C409005FA610 /* AvailabilityLabel.swift in Sources */,
 				85DDD8C31E7DA2BE0064E6B3 /* CartViewController.swift in Sources */,
 				858285EF1E88892E0016C9DB /* Server.swift in Sources */,

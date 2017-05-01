@@ -26,8 +26,6 @@ class ProductCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-//        self.roundCorners([.bottomLeft, .bottomRight, .topLeft, .topRight], radius: 4)
-//        self.drawShadow()
     }
     
     func populate(_ product: Product, _ row: Int) {
@@ -51,21 +49,5 @@ class ProductCell: UICollectionViewCell {
     func updateCounter(_ count: Int) {
         self.counter.text = String(count)
         self.counter.isHidden = count == 0
-    }
-    
-    func drawShadow() {
-        if shadowLayer == nil {
-            shadowLayer = CAShapeLayer()
-            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 12).cgPath
-//            shadowLayer.fillColor = UIColor.white.cgColor
-            shadowLayer.masksToBounds = false
-            shadowLayer.shadowColor = UIColor.black.cgColor
-            shadowLayer.shadowPath = shadowLayer.path
-            shadowLayer.shadowOffset = CGSize.zero
-            shadowLayer.shadowOpacity = 0.1
-            shadowLayer.shadowRadius = 10
-            
-            layer.insertSublayer(shadowLayer, at: 0)
-        }
     }
 }

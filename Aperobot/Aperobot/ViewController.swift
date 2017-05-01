@@ -52,19 +52,14 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
     }
     
     func setSwipeEvents() {
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe))
-        swipeRight.direction = UISwipeGestureRecognizerDirection.right
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.left
-        view.addGestureRecognizer(swipeRight)
         view.addGestureRecognizer(swipeLeft)
     }
     
     func didSwipe(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
-            case UISwipeGestureRecognizerDirection.right:
-                showSales()
             case UISwipeGestureRecognizerDirection.left:
                 showCart()
             default:
@@ -76,7 +71,7 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PushSegue" {
             if let nextVC = segue.destination as? CartViewController {
-                nextVC.products = self.products
+                return nextVC.products = self.products
             }
         }
     }
@@ -134,7 +129,6 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
     }
     
     func updateItemCount(amount: Int, product: Product) {
-        print(product.inCart)
         product.inCart += amount
         if(product.inCart < 0) { product.inCart = 0 }
         collectionView?.reloadData()

@@ -13,18 +13,18 @@ class CartViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     var products = [Product]()
     var cartItemsArray = [String]()
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var totalLabel: UILabel!
-    
-    
+    @IBOutlet weak var overlay: UIButton!
+
     @IBAction func pay(_ sender: Any) {
-        if Cart.sharedInstance.items.count == 0 { return }
-        if let next = navigationController!.viewControllers.first as? ViewController {
-            let parameters: Parameters = ["items": Cart.sharedInstance.items]
-            Alamofire.request(Server.pay, method: .post, parameters: parameters)
-            next.resetOrder() {
-                self.navigationController?.popToRootViewController(animated: true)
-            }
-        }
+        overlay.isHidden = false
+//        if Cart.sharedInstance.items.count == 0 { return }
+//        if let next = navigationController!.viewControllers.first as? ViewController {
+//            let parameters: Parameters = ["items": Cart.sharedInstance.items]
+//            Alamofire.request(Server.pay, method: .post, parameters: parameters)
+//            next.resetOrder() {
+//                self.navigationController?.popToRootViewController(animated: true)
+//            }
+//        }
     }
     
     @IBAction func circleTapped(sender:UIButton) {
@@ -36,7 +36,6 @@ class CartViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         super.viewDidLoad()
         setSwipeEvents()
-        totalLabel?.text = "Total:  " + String(getTotalPrice()) + " €"
         cartItemsArray = Array(Cart.sharedInstance.items.keys)
     }
     
