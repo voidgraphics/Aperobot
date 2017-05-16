@@ -37,7 +37,10 @@ class SalesViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func back(_ sender: Any) {
-        navigationController!.popToRootViewController(animated: true)
+//        navigationController!.popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,15 +69,15 @@ class SalesViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
     
     func setSwipeEvents() {
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe))
-        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
-        view.addGestureRecognizer(swipeLeft)
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.right
+        view.addGestureRecognizer(swipeRight)
     }
     
     func didSwipe(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
-            case UISwipeGestureRecognizerDirection.left:
+            case UISwipeGestureRecognizerDirection.right:
                 navigationController?.popToRootViewController(animated: true)
             default:
                 break
