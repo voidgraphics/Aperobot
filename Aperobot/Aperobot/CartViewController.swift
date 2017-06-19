@@ -17,14 +17,6 @@ class CartViewController: BaseViewController, UITableViewDelegate, UITableViewDa
 
     @IBAction func pay(_ sender: Any) {
         overlay.isHidden = false
-//        if Cart.sharedInstance.items.count == 0 { return }
-//        if let next = navigationController!.viewControllers.first as? ViewController {
-//            let parameters: Parameters = ["items": Cart.sharedInstance.items]
-//            Alamofire.request(Server.pay, method: .post, parameters: parameters)
-//            next.resetOrder() {
-//                self.navigationController?.popToRootViewController(animated: true)
-//            }
-//        }
     }
     
     @IBAction func circleTapped(sender:UIButton) {
@@ -45,6 +37,14 @@ class CartViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     
     @IBAction func back(_ sender: Any) {
         navigationController!.popToRootViewController(animated: true)
+    }
+    
+    func backAndReset() {
+        if let next = navigationController!.viewControllers.first as? ViewController {
+            next.resetOrder() {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
