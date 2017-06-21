@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12B3F7781EFB049A00EB4FEF /* LeftPaddedUITextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3F7771EFB049A00EB4FEF /* LeftPaddedUITextfield.swift */; };
+		12B3F77A1EFB0A0800EB4FEF /* FadeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3F7791EFB0A0800EB4FEF /* FadeExtension.swift */; };
 		12BC75701EB24A3200C1699D /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 12BC756F1EB24A3200C1699D /* Montserrat-Black.otf */; };
 		12BC75721EB24AA400C1699D /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12BC75711EB24AA400C1699D /* Lato-Regular.ttf */; };
 		12BC75741EB24ACE00C1699D /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12BC75731EB24ACE00C1699D /* Lato-Black.ttf */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		0AFC6B10CD3655E7594CB207 /* Pods-Aperobot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aperobot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aperobot/Pods-Aperobot.debug.xcconfig"; sourceTree = "<group>"; };
+		12B3F7771EFB049A00EB4FEF /* LeftPaddedUITextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftPaddedUITextfield.swift; sourceTree = "<group>"; };
+		12B3F7791EFB0A0800EB4FEF /* FadeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeExtension.swift; sourceTree = "<group>"; };
 		12BC756F1EB24A3200C1699D /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
 		12BC75711EB24AA400C1699D /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		12BC75731EB24ACE00C1699D /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 			children = (
 				12E478FD1EA94D4B00AB9FC9 /* RoundCorners.swift */,
 				12E479051EA95CDD00AB9FC9 /* RoundShadow.swift */,
+				12B3F7791EFB0A0800EB4FEF /* FadeExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 				12E478FF1EA9543D00AB9FC9 /* CounterLabel.swift */,
 				12E479011EA9585600AB9FC9 /* MinButton.swift */,
 				12E479031EA9587F00AB9FC9 /* PlusButton.swift */,
+				12B3F7771EFB049A00EB4FEF /* LeftPaddedUITextfield.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 			files = (
 				85AD10801E999E560099387D /* SalesViewController.swift in Sources */,
 				12E479041EA9587F00AB9FC9 /* PlusButton.swift in Sources */,
+				12B3F7781EFB049A00EB4FEF /* LeftPaddedUITextfield.swift in Sources */,
 				85D9A6431E91CB450072268F /* BaseViewController.swift in Sources */,
 				12E478FE1EA94D4B00AB9FC9 /* RoundCorners.swift in Sources */,
 				85864D2B1E80618900735E22 /* CartTableViewCell.swift in Sources */,
@@ -346,6 +353,7 @@
 				85FB7A711E7825CA0023BF09 /* ProductCell.swift in Sources */,
 				85FB7A731E782B960023BF09 /* Product.swift in Sources */,
 				8553497B1E789251008CCEB0 /* Cart.swift in Sources */,
+				12B3F77A1EFB0A0800EB4FEF /* FadeExtension.swift in Sources */,
 				85AD10821E99B1B30099387D /* SaleTableViewCell.swift in Sources */,
 				854804C91EB6BC3000318E8F /* PayViewController.swift in Sources */,
 				85FB7A5F1E781F0F0023BF09 /* ViewController.swift in Sources */,

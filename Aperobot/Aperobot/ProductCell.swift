@@ -14,7 +14,9 @@ class ProductCell: UICollectionViewCell {
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var rmvBtn: UIButton!
     @IBOutlet weak var counter: UILabel!
+    @IBOutlet weak var price: UILabel!
     var shadowLayer: CAShapeLayer!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,6 +32,7 @@ class ProductCell: UICollectionViewCell {
     
     func populate(_ product: Product, _ row: Int) {
         setText(product.name)
+        setPriceLabel(product.salePrice)
         addBtn.tag = row
         rmvBtn.tag = row
         updateCounter(product.inCart)
@@ -38,6 +41,10 @@ class ProductCell: UICollectionViewCell {
     
     func setText(_ text: String) {
         name.text = text
+    }
+    
+    func setPriceLabel(_ salePrice: Float) {
+        price.text = salePrice.description + "€"
     }
     
     func drawImage(_ name: String) {

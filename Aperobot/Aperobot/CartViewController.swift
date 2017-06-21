@@ -16,7 +16,7 @@ class CartViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var overlay: UIButton!
 
     @IBAction func pay(_ sender: Any) {
-        overlay.isHidden = false
+        overlay.fadeIn()
     }
     
     @IBAction func circleTapped(sender:UIButton) {

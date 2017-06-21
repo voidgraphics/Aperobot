@@ -32,14 +32,32 @@ class PayViewController: UIViewController {
             let cartVC = parent.childViewControllers[1] as! CartViewController
             totalLabel.text = cartVC.getTotalPrice().description + "€"
         }
-        
+        setSwipeEvents()
     }
 
+    func setSwipeEvents() {
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe))
+        swipeDown.direction = UISwipeGestureRecognizerDirection.down
+        view.addGestureRecognizer(swipeDown)
+    }
     
+    func didSwipe(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.down:
+                hideModal()
+            default:
+                break
+            }
+        }
+    }
+
+
     func hideModal() {
         if let parent = self.presentingViewController {
             let cartVC = parent.childViewControllers[1] as! CartViewController
-            cartVC.overlay.isHidden = true
+            cartVC.overlay.fadeOut()
+//            cartVC.overlay.isHidden = true
             dismiss(animated: true, completion: nil)
         }
         
@@ -48,7 +66,8 @@ class PayViewController: UIViewController {
     func hideModalAndResetCart() {
         if let parent = self.presentingViewController {
             let cartVC = parent.childViewControllers[1] as! CartViewController
-            cartVC.overlay.isHidden = true
+            cartVC.overlay.fadeOut()
+//            cartVC.overlay.isHidden = true
             dismiss(animated: true, completion: nil)
             Cart.sharedInstance.reset()
             cartVC.backAndReset()
