@@ -8,7 +8,7 @@
 
 struct Server {
 
-    static let base = "http://192.168.0.18:3000"
+    static let base = "http://192.168.175.120:3002"
     
     static var list: String {
         get { return self.base + "/products" }

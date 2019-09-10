@@ -82,14 +82,14 @@ class CartViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     
     func setSwipeEvents() {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe))
-        swipeRight.direction = UISwipeGestureRecognizerDirection.right
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
         view.addGestureRecognizer(swipeRight)
     }
     
-    func didSwipe(gesture: UIGestureRecognizer) {
+    @objc func didSwipe(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
-            case UISwipeGestureRecognizerDirection.right:
+            case UISwipeGestureRecognizer.Direction.right:
                 navigationController?.popToRootViewController(animated: true)
             default:
                 break

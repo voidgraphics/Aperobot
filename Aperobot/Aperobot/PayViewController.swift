@@ -29,7 +29,7 @@ class PayViewController: UIViewController {
     override func viewDidLoad() {
         
         if let parent = self.presentingViewController {
-            let cartVC = parent.childViewControllers[1] as! CartViewController
+            let cartVC = parent.children[1] as! CartViewController
             totalLabel.text = cartVC.getTotalPrice().description + "€"
         }
         setSwipeEvents()
@@ -37,14 +37,14 @@ class PayViewController: UIViewController {
 
     func setSwipeEvents() {
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe))
-        swipeDown.direction = UISwipeGestureRecognizerDirection.down
+        swipeDown.direction = UISwipeGestureRecognizer.Direction.down
         view.addGestureRecognizer(swipeDown)
     }
     
-    func didSwipe(gesture: UIGestureRecognizer) {
+    @objc func didSwipe(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
-            case UISwipeGestureRecognizerDirection.down:
+            case UISwipeGestureRecognizer.Direction.down:
                 hideModal()
             default:
                 break
@@ -55,7 +55,7 @@ class PayViewController: UIViewController {
 
     func hideModal() {
         if let parent = self.presentingViewController {
-            let cartVC = parent.childViewControllers[1] as! CartViewController
+            let cartVC = parent.children[1] as! CartViewController
             cartVC.overlay.fadeOut()
 //            cartVC.overlay.isHidden = true
             dismiss(animated: true, completion: nil)
@@ -65,7 +65,7 @@ class PayViewController: UIViewController {
     
     func hideModalAndResetCart() {
         if let parent = self.presentingViewController {
-            let cartVC = parent.childViewControllers[1] as! CartViewController
+            let cartVC = parent.children[1] as! CartViewController
             cartVC.overlay.fadeOut()
 //            cartVC.overlay.isHidden = true
             dismiss(animated: true, completion: nil)

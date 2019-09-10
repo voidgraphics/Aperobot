@@ -53,14 +53,14 @@ class ViewController: BaseViewController, UICollectionViewDelegate, UICollection
     
     func setSwipeEvents() {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe))
-        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
         view.addGestureRecognizer(swipeLeft)
     }
     
-    func didSwipe(gesture: UIGestureRecognizer) {
+    @objc func didSwipe(gesture: UIGestureRecognizer) {
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
             switch swipeGesture.direction {
-            case UISwipeGestureRecognizerDirection.left:
+            case UISwipeGestureRecognizer.Direction.left:
                 showCart()
             default:
                 break
